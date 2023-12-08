@@ -52,4 +52,16 @@ public class BoardController {
         return "redirect:list";
     }
 
+    @RequestMapping(value="/board/delete/{id}" , method = RequestMethod.GET)
+    public String deletePost(@PathVariable("id") int id){
+        BoardVO boardVO = boardService.getBoard(id);
+
+        int i = boardService.deleteBoard(boardVO);
+        if(i==0)
+            System.out.println("데이터 삭제 실패");
+        else
+            System.out.println("데이터 삭제 성공!");
+        return "redirect:list";
+    }
+
 }

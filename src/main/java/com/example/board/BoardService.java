@@ -20,6 +20,10 @@ public class BoardService {
         return boardDAO.updateBoard(vo);
     }
 
+    public  int deleteBoard(BoardVO vo){
+        return boardDAO.deleteBoard(vo);
+    }
+
     public int insertBoard(BoardVO vo){
         return boardDAO.insertBoard(vo);
     }

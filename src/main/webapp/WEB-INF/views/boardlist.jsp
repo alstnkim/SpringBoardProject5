@@ -43,7 +43,7 @@
         <div>${a.getTitle()}</div>
         <div>${a.getWriter()}</div>
         <div><a href="editform/${a.getSeq()}">Edit</a></div>
-        <div><a href="javascript:delete_ok('${a.getSeq()}')">Delete</a></div>
+        <div><a href="../board/delete/${a.getSeq()}">Delete</a></div>
     </div>
     </c:forEach>
     </div>
